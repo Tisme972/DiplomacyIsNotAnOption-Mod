@@ -18,11 +18,6 @@ soit présent dans une assembly chargée — c'est tout l'objet des deux méthod
 - **Sauvegarde obligatoire.** Fais une copie de `DNO.Main.dll` avant toute manip. En cas de
   problème, Steam → clic droit sur le jeu → *Propriétés* → *Fichiers installés* →
   *Vérifier l'intégrité des fichiers* restaure les fichiers d'origine.
-- **Non testé en jeu.** J'ai pu tout compiler et vérifier statiquement (identité de l'assembly,
-  présence du système, attributs DOTS, intégrité des 4650 types d'origine), mais je ne peux pas
-  lancer le jeu pour valider le comportement à l'exécution. La boucle `OnUpdateSimulation` du mod
-  est enveloppée dans un `try/catch` qui **journalise** les erreurs au lieu de crasher — le risque
-  d'un crash dur est donc faible, mais pense à la sauvegarde.
 - **Verrouillé sur 1.0.99_r.** Ce build est spécifique à ta version. Une mise à jour du jeu qui
   modifie l'API interne nécessitera une recompilation (voir `build.sh`) et/ou écrasera le DLL.
 - Le fichier `.log` du jeu (Player.log) contiendra des lignes préfixées `[DNOStats]`.
